@@ -60,7 +60,7 @@ const (
 var (
 	// Description of how to auth for this app
 	storageConfig = &oauth2.Config{
-		Scopes:       []string{storage.DevstorageReadWriteScope},
+		Scopes:       []string{storage.DevstorageFullControlScope},
 		Endpoint:     google.Endpoint,
 		ClientID:     rcloneClientID,
 		ClientSecret: obscure.MustReveal(rcloneEncryptedClientSecret),
